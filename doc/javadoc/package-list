@@ -1,0 +1,10 @@
+es.uvigo.esei.dai.hybridserver
+es.uvigo.esei.dai.hybridserver.controller
+es.uvigo.esei.dai.hybridserver.controller.service
+es.uvigo.esei.dai.hybridserver.controller.utils
+es.uvigo.esei.dai.hybridserver.database
+es.uvigo.esei.dai.hybridserver.database.dao
+es.uvigo.esei.dai.hybridserver.database.entity
+es.uvigo.esei.dai.hybridserver.exception
+es.uvigo.esei.dai.hybridserver.server
+es.uvigo.esei.dai.hybridserver.server.protocol

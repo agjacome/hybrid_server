@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.esei.uvigo.es/dai/hybridserver"
+        xmlns:tns="http://www.esei.uvigo.es/dai/hybridserver"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+
+  <complexType name="connections">
+    <sequence>
+      <element name="http" type="unsignedInt" minOccurs="1" />
+      <element name="webservice" type="anyURI" minOccurs="1" />
+      <element name="numClients" type="unsignedInt" minOccurs="1" />
+    </sequence>
+  </complexType>
+
+  <complexType name="database">
+    <sequence>
+      <element name="user" type="string" minOccurs="1" />
+      <element name="password" type="string" minOccurs="1" />
+      <element name="url" type="string" minOccurs="1" />
+    </sequence>
+  </complexType>
+
+  <complexType name="server">
+    <attribute name="name" type="string" use="required" />
+    <attribute name="wsdl" type="anyURI" use="required" />
+    <attribute name="namespace" type="anyURI" use="required" />
+    <attribute name="service" type="string" use="required" />
+    <attribute name="httpAddress" type="anyURI" use="required" />
+  </complexType>
+
+  <complexType name="servers">
+    <sequence>
+      <element name="server" type="tns:server" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <element name="configuration">
+    <complexType>
+      <all>
+        <element name="connections" type="tns:connections" minOccurs="1" maxOccurs="1" />
+        <element name="database" type="tns:database" minOccurs="1" maxOccurs="1" />
+        <element name="servers" type="tns:servers" minOccurs="0" />
+      </all>
+    </complexType>
+  </element>
+
+</schema>
