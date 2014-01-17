@@ -1,23 +1,23 @@
 ﻿Servidor Híbrido de Documentos Estructurados
 ============================================
 
-Grupo Proyecto 1.2
-------------------
+Autores
+-------
 
-* García Limón, Jesús        DNI: 34274576-E
-* Gutiérrez Jácome, Alberto  DNI: 44473906-W
-* Vázquez Fernández, Pablo   DNI: 44656466-B
+* García Limón, Jesús
+* Gutiérrez Jácome, Alberto
+* Vázquez Fernández, Pablo
 
 Instalación y ejecución
 -----------------------
 
-Se asume la previa compilación, con un compilador de código Java, de todo el 
-código fuente dentro del árbol de directorios `src/`. Se asume, además, que 
-todos los ficheros .class generados en la compilacion cuelgan de un arbol de 
-directorios `bin/` bajo la misma estructura que el directorio del código fuente 
-original. Para dicha tarea se recomienda el uso de alguna herramienta de 
-compilacion de codigo Java, como pueden ser Ant, Maven o incluso algun IDE como 
-Eclipse o IntelliJ, y no ser realizada manualmente con el compilador de Java 
+Se asume la previa compilación, con un compilador de código Java, de todo el
+código fuente dentro del árbol de directorios `src/`. Se asume, además, que
+todos los ficheros .class generados en la compilacion cuelgan de un arbol de
+directorios `bin/` bajo la misma estructura que el directorio del código fuente
+original. Para dicha tarea se recomienda el uso de alguna herramienta de
+compilacion de codigo Java, como pueden ser Ant, Maven o incluso algun IDE como
+Eclipse o IntelliJ, y no ser realizada manualmente con el compilador de Java
 (javac).
 
 #### Configuración
@@ -117,14 +117,14 @@ contar con una columna `uuid` y una columna `content`. A mayores, la tabla
 `XSLT` debe contar con otra columna `xsd` que haga referencia al `uuid` de la
 tabla `XSD`, pero sin configurarse como una clave foránea hacia la misma.
 
-Dentro del directorio `sql/` se proporcionan dos scripts SQL para la creacion 
-de dichas tablas, junto a la inserción de diez documentos HTML de prueba, en un 
+Dentro del directorio `sql/` se proporcionan dos scripts SQL para la creacion
+de dichas tablas, junto a la inserción de diez documentos HTML de prueba, en un
 sistema MySQL y en un sistema Apache Derby.
 
-El script para Apache Derby asumira que ya se ha establecido (e.g. por consola) 
-una conexion a una base de datos existente donde crear las tablas, puesto que el 
-sistema no proporciona ninguna sintaxis SQL para la creacion directa. Mientras 
-tanto, el script para MySQL se encargará de la creación de una base de datos 
+El script para Apache Derby asumira que ya se ha establecido (e.g. por consola)
+una conexion a una base de datos existente donde crear las tablas, puesto que el
+sistema no proporciona ninguna sintaxis SQL para la creacion directa. Mientras
+tanto, el script para MySQL se encargará de la creación de una base de datos
 con el nombre `HybridServer` y el usuario `dai_user` con contraseña `dai_pass`.
 
 Documentación
